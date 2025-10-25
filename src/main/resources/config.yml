@@ -1,0 +1,169 @@
+# ============================================================================================================================================================================
+# Ranks Configuration
+# This plugin requires Vault and an economy plugin to function
+# Commands executed with [console] prefix will be run from console
+# ============================================================================================================================================================================
+
+defaultpath: default
+
+Ranks:
+  default:
+    'mortal':
+      display: "&7[Mortal]"
+      nextrank: adept
+      cost: 0
+    'adept':
+      display: "&a[Adept]"
+      nextrank: hero
+      cost: 10000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &a&l[Adept]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add adept"
+      - "[console] lp user %player% parent remove mortal"
+      - "[console] lp user %player% parent remove default"
+    'hero':
+      display: "&2[Hero]"
+      nextrank: paragon
+      cost: 50000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &2&l[Hero]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add hero"
+      - "[console] lp user %player% parent remove adept"
+    'paragon':
+      display: "&b[Paragon]"
+      nextrank: demigod
+      cost: 200000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &b&l[Paragon]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add paragon"
+      - "[console] lp user %player% parent remove hero"
+    'demigod':
+      display: "&6[Demigod]"
+      nextrank: ascendant
+      cost: 1000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &6&l[Demigod]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add demigod"
+      - "[console] lp user %player% parent remove paragon"
+    'ascendant':
+      display: "&d[Ascendant]"
+      nextrank: titan
+      cost: 5000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &d&l[Ascendant]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add ascendant"
+      - "[console] lp user %player% parent remove demigod"
+    'titan':
+      display: "&5[Titan]"
+      nextrank: deity
+      cost: 10000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &5&l[Titan]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add titan"
+      - "[console] lp user %player% parent remove ascendant"
+    'deity':
+      display: "&e[Deity]"
+      nextrank: sovereign
+      cost: 50000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &e&l[Deity]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add deity"
+      - "[console] lp user %player% parent remove titan"
+    'sovereign':
+      display: "&3[Sovereign]"
+      nextrank: primordial
+      cost: 100000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &3&l[Sovereign]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add sovereign"
+      - "[console] lp user %player% parent remove deity"
+    'primordial':
+      display: "&9[Primordial]"
+      nextrank: apex
+      cost: 250000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &9&l[Primordial]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add primordial"
+      - "[console] lp user %player% parent remove sovereign"
+    'apex':
+      display: "&c[Apex]"
+      nextrank: eternal
+      cost: 500000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &c&l[Apex]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add apex"
+      - "[console] lp user %player% parent remove primordial"
+    'eternal':
+      display: "&f[Eternal]"
+      nextrank: cosmic
+      cost: 1000000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &f&l[Eternal]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add eternal"
+      - "[console] lp user %player% parent remove apex"
+    'cosmic':
+      display: "&1[Cosmic]"
+      nextrank: thearchitect
+      cost: 2500000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &1&l[Cosmic]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add cosmic"
+      - "[console] lp user %player% parent remove eternal"
+    'thearchitect':
+      display: "&e&l[The Architect]"
+      nextrank: ancientgod
+      cost: 5000000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&e%player% &fhas been promoted to &e&l[The Architect]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add thearchitect"
+      - "[console] lp user %player% parent remove cosmic"
+    'ancientgod':
+      display: "&4&l[Ancient God]"
+      nextrank: LASTRANK
+      cost: 10000000000
+      broadcast:
+      - "&7&m-----------------"
+      - "&c&lAll hail &e%player%&c&l, who has achieved the final rank: &4&l[Ancient God]!"
+      - "&7&m-----------------"
+      executecmds:
+      - "[console] lp user %player% parent add ancientgod"
+      - "[console] lp user %player% parent remove thearchitect"

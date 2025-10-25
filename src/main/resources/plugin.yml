@@ -1,0 +1,22 @@
+name: Ranks
+version: 1.0.0
+main: com.supafloof.Ranks
+api-version: '1.21'
+author: SupaFloof Games, LLC
+depend: [Vault, LuckPerms]
+description: Rank progression system with economy integration
+
+commands:
+  ranks:
+    description: Show ranks, upgrade, or manage rank system
+    usage: /ranks [help|reload|next|upgrade <rank>]
+    permission: ranks.use
+    permission-message: You don't have permission to use this command.
+
+permissions:
+  ranks.use:
+    description: Allows use of basic rank commands
+    default: true
+  ranks.reload:
+    description: Allows reloading the configuration
+    default: op
