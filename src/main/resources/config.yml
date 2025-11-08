@@ -15,7 +15,7 @@ Ranks:
     'adept':
       display: "&a[Adept]"
       nextrank: hero
-      cost: 10000
+      cost: 20000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &a&l[Adept]!"
@@ -27,7 +27,7 @@ Ranks:
     'hero':
       display: "&2[Hero]"
       nextrank: paragon
-      cost: 50000
+      cost: 100000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &2&l[Hero]!"
@@ -38,7 +38,7 @@ Ranks:
     'paragon':
       display: "&b[Paragon]"
       nextrank: demigod
-      cost: 200000
+      cost: 400000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &b&l[Paragon]!"
@@ -49,7 +49,7 @@ Ranks:
     'demigod':
       display: "&6[Demigod]"
       nextrank: ascendant
-      cost: 1000000
+      cost: 2000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &6&l[Demigod]!"
@@ -60,7 +60,7 @@ Ranks:
     'ascendant':
       display: "&d[Ascendant]"
       nextrank: titan
-      cost: 5000000
+      cost: 10000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &d&l[Ascendant]!"
@@ -71,7 +71,7 @@ Ranks:
     'titan':
       display: "&5[Titan]"
       nextrank: deity
-      cost: 10000000
+      cost: 20000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &5&l[Titan]!"
@@ -82,7 +82,7 @@ Ranks:
     'deity':
       display: "&e[Deity]"
       nextrank: sovereign
-      cost: 50000000
+      cost: 100000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &e&l[Deity]!"
@@ -93,7 +93,7 @@ Ranks:
     'sovereign':
       display: "&3[Sovereign]"
       nextrank: primordial
-      cost: 100000000
+      cost: 200000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &3&l[Sovereign]!"
@@ -104,7 +104,7 @@ Ranks:
     'primordial':
       display: "&9[Primordial]"
       nextrank: apex
-      cost: 250000000
+      cost: 500000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &9&l[Primordial]!"
@@ -115,7 +115,8 @@ Ranks:
     'apex':
       display: "&c[Apex]"
       nextrank: eternal
-      cost: 500000000
+      cost: -1
+      cost-message: "Purchase at www.suapfloof.com/pixels"
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &c&l[Apex]!"
@@ -126,7 +127,8 @@ Ranks:
     'eternal':
       display: "&f[Eternal]"
       nextrank: cosmic
-      cost: 1000000000
+      cost: -1
+      cost-message: "Purchase at www.suapfloof.com/pixels"
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &f&l[Eternal]!"
@@ -137,7 +139,8 @@ Ranks:
     'cosmic':
       display: "&1[Cosmic]"
       nextrank: thearchitect
-      cost: 2500000000
+      cost: -1
+      cost-message: "Purchase at www.suapfloof.com/pixels"
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &1&l[Cosmic]!"
@@ -148,7 +151,8 @@ Ranks:
     'thearchitect':
       display: "&e&l[The Architect]"
       nextrank: ancientgod
-      cost: 5000000000
+      cost: -1
+      cost-message: "Purchase at www.suapfloof.com/pixels"
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &e&l[The Architect]!"
@@ -159,7 +163,8 @@ Ranks:
     'ancientgod':
       display: "&4&l[Ancient God]"
       nextrank: LASTRANK
-      cost: 10000000000
+      cost: -1
+      cost-message: "Purchase at www.suapfloof.com/pixels"
       broadcast:
       - "&7&m-----------------"
       - "&c&lAll hail &e%player%&c&l, who has achieved the final rank: &4&l[Ancient God]!"

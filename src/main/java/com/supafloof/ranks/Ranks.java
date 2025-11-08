@@ -622,26 +622,39 @@ public class Ranks extends JavaPlugin implements Listener {
                 } else {
                     // Calculate cumulative cost from current rank to this rank
                     double cumulativeFromCurrent = 0;
+                    boolean hasUnpurchasableRank = false;
                     for (int j = currentRankIndex + 1; j <= i + 1; j++) {
                         if (j < rankOrder.size()) {
                             ConfigurationSection tempSection = ranksSection.getConfigurationSection(rankOrder.get(j));
                             if (tempSection != null) {
-                                cumulativeFromCurrent += tempSection.getDouble("cost", 0);
+                                double tempCost = tempSection.getDouble("cost", 0);
+                                if (tempCost == -1) {
+                                    hasUnpurchasableRank = true;
+                                } else {
+                                    cumulativeFromCurrent += tempCost;
+                                }
                             }
                         }
                     }
                     
-                    // Future rank - show with costs
+                    // Future rank - show with costs or cost-message
                     line = line.append(displayComponent)
                             .append(Component.text(" > ", NamedTextColor.WHITE))
                             .append(nextDisplayComponent)
-                            .append(Component.text(" | ", NamedTextColor.GRAY))
-                            .append(Component.text("$" + moneyFormat.format(cost), NamedTextColor.YELLOW));
+                            .append(Component.text(" | ", NamedTextColor.GRAY));
                     
-                    // Show cumulative cost if not current rank
-                    if (!isCurrent && cumulativeFromCurrent > 0) {
-                        line = line.append(Component.text(" | ", NamedTextColor.GRAY))
-                                .append(Component.text("$" + moneyFormat.format(cumulativeFromCurrent), NamedTextColor.GOLD));
+                    // Check if this rank has cost -1 (cannot be purchased with currency)
+                    if (cost == -1) {
+                        String costMessage = nextRankSection.getString("cost-message", "Not available for purchase");
+                        line = line.append(Component.text(costMessage, NamedTextColor.RED));
+                    } else {
+                        line = line.append(Component.text("$" + moneyFormat.format(cost), NamedTextColor.YELLOW));
+                        
+                        // Show cumulative cost if not current rank and no unpurchasable ranks in between
+                        if (!isCurrent && cumulativeFromCurrent > 0 && !hasUnpurchasableRank) {
+                            line = line.append(Component.text(" | ", NamedTextColor.GRAY))
+                                    .append(Component.text("$" + moneyFormat.format(cumulativeFromCurrent), NamedTextColor.GOLD));
+                        }
                     }
                     
                     // Add green arrow for current rank
@@ -703,6 +716,14 @@ public class Ranks extends JavaPlugin implements Listener {
             }
 
             double cost = nextSection.getDouble("cost", 0);
+            
+            // Check if rank cannot be purchased with currency
+            if (cost == -1) {
+                String costMessage = nextSection.getString("cost-message", "This rank cannot be purchased with currency.");
+                player.sendMessage(Component.text(costMessage, NamedTextColor.RED));
+                return;
+            }
+            
             double balance = economy.getBalance(player);
             
             // Check if player can afford the rank
@@ -764,13 +785,34 @@ public class Ranks extends JavaPlugin implements Listener {
                 return;
             }
 
-            // Calculate total cumulative cost
+            // Calculate total cumulative cost and check for unpurchasable ranks
             double totalCost = 0;
+            boolean hasUnpurchasableRank = false;
+            String unpurchasableRankName = "";
+            
             for (int i = currentIndex + 1; i <= targetIndex; i++) {
                 ConfigurationSection section = ranksSection.getConfigurationSection(rankOrder.get(i));
                 if (section != null) {
-                    totalCost += section.getDouble("cost", 0);
+                    double rankCost = section.getDouble("cost", 0);
+                    if (rankCost == -1) {
+                        hasUnpurchasableRank = true;
+                        unpurchasableRankName = rankOrder.get(i);
+                        break;
+                    }
+                    totalCost += rankCost;
                 }
+            }
+            
+            // Check if there's an unpurchasable rank in the path
+            if (hasUnpurchasableRank) {
+                ConfigurationSection unpurchasableSection = ranksSection.getConfigurationSection(unpurchasableRankName);
+                String costMessage = unpurchasableSection != null ? 
+                    unpurchasableSection.getString("cost-message", "This rank cannot be purchased with currency.") : 
+                    "This rank cannot be purchased with currency.";
+                player.sendMessage(Component.text("Cannot upgrade to " + targetRank + " because '" + unpurchasableRankName + 
+                        "' is in the path and cannot be purchased with currency.", NamedTextColor.RED));
+                player.sendMessage(Component.text(costMessage, NamedTextColor.RED));
+                return;
             }
 
             double balance = economy.getBalance(player);
