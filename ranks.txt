@@ -1,0 +1,272 @@
+=====================================
+RANKS GUIDE  
+=====================================
+A player's guide to the Ranks progression system
+By SupaFloof Games
+=====================================
+PAGE 1
+=====================================
+WHAT IS RANKS?
+
+Ranks is a progression system that lets you advance through different ranks by spending in-game currency.
+
+As you earn money on the server, you can purchase higher ranks that unlock new permissions and perks.
+=====================================
+PAGE 2
+=====================================
+GETTING STARTED
+
+When you first join, you'll automatically be assigned to the starting rank.
+
+From there, you can work your way up by earning money and purchasing rank upgrades.
+=====================================
+PAGE 3
+=====================================
+VIEWING RANKS
+
+Command: /ranks
+
+This shows all available ranks with:
+- Your current rank (green arrow)
+- Completed ranks (✓)
+- Future ranks (✗)
+- Cost of each rank
+- Your balance
+- How much more you need
+=====================================
+PAGE 4
+=====================================
+UPGRADE TO NEXT RANK
+
+Command: /ranks next
+
+This upgrades you to the next rank in progression.
+
+The plugin will:
+1. Check if you can afford it
+2. Withdraw the money
+3. Give you the new rank
+4. Announce to the server
+=====================================
+PAGE 5
+=====================================
+SKIP MULTIPLE RANKS
+
+Command: /ranks upgrade <rankname>
+
+Example: /ranks upgrade hero
+
+This lets you jump ahead by paying the combined cost of all ranks in between.
+=====================================
+PAGE 6
+=====================================
+RANK COSTS
+
+Free Ranks (Cost: $0)
+- Usually the starting rank
+
+Purchasable Ranks
+- Have a specific money cost
+- Buy with in-game currency
+
+Non-Purchasable Ranks
+- Cannot be bought with money
+- Usually donor ranks
+=====================================
+PAGE 7
+=====================================
+GETTING HELP
+
+Command: /ranks help
+
+Shows all available commands with descriptions.
+
+If you need more help, ask a server administrator!
+=====================================
+PAGE 8
+=====================================
+UNDERSTANDING YOUR DISPLAY
+
+When you use /ranks, you'll see:
+
+✓ [Mortal] - $0
+✓ [Adept] - $40,000 <----
+✗ [Hero] - $200,000
+
+✓ = Completed
+✗ = Not yet achieved
+<---- = Your current rank
+=====================================
+PAGE 9
+=====================================
+WHAT HAPPENS WHEN YOU RANK UP?
+
+1. Money is deducted from your account
+
+2. A broadcast announces your achievement
+
+3. Your permissions update automatically
+
+4. You gain access to new perks
+=====================================
+PAGE 10
+=====================================
+COMMON ERRORS
+
+"You don't have enough money!"
+- Earn more currency first
+
+"This rank cannot be purchased with currency"
+- This is a donor/premium rank
+
+"You are already at the highest rank!"
+- Congratulations!
+=====================================
+PAGE 11
+=====================================
+TIPS FOR SUCCESS
+
+- Check /ranks regularly to track your progress
+
+- Save up for multi-rank jumps if you want
+
+- Plan which rank you want to reach
+
+- Earn money through server activities
+=====================================
+PAGE 12
+=====================================
+WHEN TO USE EACH COMMAND
+
+Use /ranks next when:
+- Upgrading one at a time
+- You're close to the next rank
+- You want each celebration
+
+Use /ranks upgrade when:
+- You've saved up lots of money
+- You want to skip ahead
+- Reaching a goal rank quickly
+=====================================
+PAGE 13
+=====================================
+CHECKING AFFORDABILITY
+
+The /ranks display shows if you can afford each rank:
+
+"(Can afford)" in green
+- You have enough money
+
+"(Need $X more)" in red
+- How much more you need
+
+This helps you plan!
+=====================================
+PAGE 14
+=====================================
+RANK PROGRESSION
+
+Ranks always go upward!
+
+You cannot:
+- Downgrade to lower ranks
+- Buy the same rank twice
+- Skip non-purchasable ranks
+
+But you can:
+- Jump multiple ranks at once
+- View all ranks anytime
+=====================================
+PAGE 15
+=====================================
+ABOUT BROADCASTS
+
+When you rank up, all online players see a message!
+
+This celebrates your achievement and lets everyone know about your progress.
+
+Broadcasts are automatic and configured by the server.
+=====================================
+PAGE 16
+=====================================
+MULTI-RANK UPGRADES
+
+When you jump multiple ranks:
+
+- You pay the TOTAL cost
+- All ranks in between process
+- You get all permissions
+- Each rank announces
+
+Example: Mortal to Hero pays for both Adept and Hero!
+=====================================
+PAGE 17
+=====================================
+YOUR BALANCE MATTERS
+
+Always check your balance before upgrading!
+
+The plugin tells you:
+- Current balance
+- Rank costs
+- How much more needed
+
+No money is taken unless the upgrade succeeds.
+=====================================
+PAGE 18
+=====================================
+RANK NAMES
+
+Rank names are not case-sensitive.
+
+These all work:
+/ranks upgrade hero
+/ranks upgrade Hero
+/ranks upgrade HERO
+
+Just type it correctly!
+=====================================
+PAGE 19
+=====================================
+AUTOMATIC PERMISSIONS
+
+When you rank up, the server automatically:
+
+- Adds your new rank permissions
+- Updates your group
+- Removes old rank group
+
+You don't need to do anything - it's automatic!
+=====================================
+PAGE 20
+=====================================
+ENJOYING YOUR JOURNEY
+
+Ranking up is part of your server experience!
+
+Take your time, enjoy the progression, and celebrate each achievement.
+
+Good luck on your journey to the top!
+=====================================
+PAGE 21
+=====================================
+NEED MORE HELP?
+
+Commands:
+- /ranks - View ranks
+- /ranks help - Command list
+- /ranks next - Upgrade
+- /ranks upgrade <rank> - Skip ahead
+
+Contact a server admin if you have issues!
+=====================================
+PAGE 22
+=====================================
+Thank you for using the Ranks system!
+
+May your journey to the highest rank be filled with success!
+
+Happy ranking!
+
+- SupaFloof Games, LLC
+=====================================

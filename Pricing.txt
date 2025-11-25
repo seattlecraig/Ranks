@@ -1,0 +1,37 @@
+
+    'adept': $1.00
+    'hero': $2.00
+    'paragon': $3.00
+    'demigod': $5.00
+    'ascendant': $7.5
+    'titan': $10.00
+    'deity': $12.50
+    'sovereign': $15.00
+    'primordial': $20.00
+    'apex': $30
+    'eternal': $50
+    'cosmic': $75
+    'thearchitect': $100
+    'ancientgod': $125
+
+
+    Godly key pricing:
+    1: $2.50
+    5: $12
+    10 $22.50
+
+    Ancient God key pricing:
+    1: $4
+    5: $19
+    10 $36
+
+  Eldritch key pricing:
+    1: $6
+    5: $28.5
+    10 $54
+
+  
+  Powers Key Pricing
+    1: $8
+    3: $23.5
+    5: $38

@@ -15,7 +15,7 @@ Ranks:
     'adept':
       display: "&a[Adept]"
       nextrank: hero
-      cost: 20000
+      cost: 40000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &a&l[Adept]!"
@@ -27,7 +27,7 @@ Ranks:
     'hero':
       display: "&2[Hero]"
       nextrank: paragon
-      cost: 100000
+      cost: 200000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &2&l[Hero]!"
@@ -38,7 +38,7 @@ Ranks:
     'paragon':
       display: "&b[Paragon]"
       nextrank: demigod
-      cost: 400000
+      cost: 800000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &b&l[Paragon]!"
@@ -49,7 +49,7 @@ Ranks:
     'demigod':
       display: "&6[Demigod]"
       nextrank: ascendant
-      cost: 2000000
+      cost: 4000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &6&l[Demigod]!"
@@ -60,7 +60,7 @@ Ranks:
     'ascendant':
       display: "&d[Ascendant]"
       nextrank: titan
-      cost: 10000000
+      cost: 20000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &d&l[Ascendant]!"
@@ -71,7 +71,7 @@ Ranks:
     'titan':
       display: "&5[Titan]"
       nextrank: deity
-      cost: 20000000
+      cost: 40000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &5&l[Titan]!"
@@ -82,7 +82,7 @@ Ranks:
     'deity':
       display: "&e[Deity]"
       nextrank: sovereign
-      cost: 100000000
+      cost: 200000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &e&l[Deity]!"
@@ -93,7 +93,7 @@ Ranks:
     'sovereign':
       display: "&3[Sovereign]"
       nextrank: primordial
-      cost: 200000000
+      cost: 400000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &3&l[Sovereign]!"
@@ -104,7 +104,7 @@ Ranks:
     'primordial':
       display: "&9[Primordial]"
       nextrank: apex
-      cost: 500000000
+      cost: 1000000000
       broadcast:
       - "&7&m-----------------"
       - "&e%player% &fhas been promoted to &9&l[Primordial]!"
